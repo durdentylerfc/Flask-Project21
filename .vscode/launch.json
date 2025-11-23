@@ -1,0 +1,24 @@
+// add launch instructions for running a Flask application in debug mode
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask", // The descriptive name that appears in the VSCode Run  and decebug dropdown menu Ex: Python, Flask)
+            "type": "Python",
+            "request": "launch",
+            "module": "flask",  // SPecifies that the debugger should lauch the Python flask module 
+            "env": {  // Sets  environment variables that Flask needs to run the application 
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [  // Passes arguments to the 'flask run' command
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true, // Set to 'true' to enable better debugging from stopping into code for libraries like Flask itself, focusing only on our application code
+            "justMyCode": true
+        }
+    ]
+}

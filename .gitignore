@@ -1,0 +1,8 @@
+# Ignore compiled Python files 
+.env 
+__pycache__/ 
+
+# Ignore Notes 
+notes/*.md
+
+# Ignore VSCode settings except launch.json
